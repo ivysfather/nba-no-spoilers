@@ -59,6 +59,16 @@
   .bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; gap: 10px; }
   .bar button { background: none; border: 1px solid var(--line); color: var(--text); border-radius: 8px; padding: 6px 12px; font: inherit; cursor: pointer; }
   .game.fav { border-color: var(--accent); }
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .spoil {
+    flex: none; border: 0; border-radius: 999px; padding: 8px 14px; font: inherit; font-size: 14px; font-weight: 600;
+    background: var(--live); color: #fff; cursor: pointer;
+  }
+  .spoil.on { background: none; border: 1px solid var(--live); color: var(--live); }
+  .score { margin-left: auto; padding-left: 10px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
+  .score.win { color: var(--text); font-weight: 700; }
+  .result { font-size: 13px; color: var(--muted); }
+  .result a { color: var(--live); text-decoration: none; margin-left: 6px; }
   .star { color: var(--accent); margin-left: -4px; }
   nav button .dot { color: var(--accent); margin-left: 4px; }
   nav button.on .dot { color: #111; }
@@ -76,8 +86,11 @@
 </head>
 <body>
 <header>
-  <h1>🏀 No Spoilers NBA</h1>
-  <div class="sub" id="updated">Loading…</div>
+  <div>
+    <h1>🏀 No Spoilers NBA</h1>
+    <div class="sub" id="updated">Loading…</div>
+  </div>
+  <button class="spoil" id="spoil">Show scores</button>
 </header>
 <nav id="days"></nav>
 <main id="games"></main>
@@ -99,6 +112,8 @@ const isFav = (g) => FAVORITES.includes(g.home.nick) || FAVORITES.includes(g.awa
 
 const $ = (id) => document.getElementById(id);
 let games = [], selected = null;
+// Scores are fetched from ESPN only when you ask, for one day, and forgotten on day change or reload.
+let scores = null;
 
 function dayLabel(iso) {
   const d = new Date(iso + "T12:00:00");
@@ -118,7 +133,39 @@ function status(g) {
   return `<span class="tag">${t}</span>`;
 }
 
+function scoreFor(t) {
+  const s = scores?.teams[t.abbr + "@" + selected];
+  return s ? `<span class="score ${s.win ? "win" : ""}">${s.score}</span>` : "";
+}
+
+function resultLine(g) {
+  const r = scores?.games[g.id];
+  if (!r) return "";
+  return `<div class="result">${r.detail}<a href="https://www.espn.com/nba/boxscore/_/gameId/${g.id}" target="_blank" rel="noopener">Box score ↗</a></div>`;
+}
+
+async function showScores() {
+  const label = $("days").querySelector(".on")?.textContent.replace("★", "") || "this day";
+  if (!confirm(`Show scores for ${label}? This reveals results.`)) return;
+  const raw = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${selected.replaceAll("-", "")}`)
+    .then((r) => r.json());
+  scores = { day: selected, teams: {}, games: {} };
+  for (const e of raw.events || []) {
+    const comp = e.competitions[0];
+    if (e.status.type.state === "pre") continue;
+    scores.games[e.id] = { detail: e.status.type.shortDetail };
+    for (const c of comp.competitors)
+      scores.teams[c.team.abbreviation + "@" + selected] = { score: c.score, win: !!c.winner };
+  }
+  render();
+}
+
+function hideScores() { scores = null; render(); }
+
 function render() {
+  if (scores && scores.day !== selected) scores = null;
+  $("spoil").textContent = scores ? "Hide scores" : "Show scores";
+  $("spoil").classList.toggle("on", !!scores);
   const days = [...new Set(games.map((g) => g.date))].sort();
   $("days").innerHTML = days.map((d) =>
     `<button class="${d === selected ? "on" : ""}" data-day="${d}">${dayLabel(d)}${
@@ -127,10 +174,10 @@ function render() {
   const list = games.filter((g) => g.date === selected)
     .sort((a, b) => isFav(b) - isFav(a) || a.tipoff.localeCompare(b.tipoff));
   const team = (t, home) => `<div class="team"><img src="${t.logo}" alt=""><span class="nm">${t.name}</span>${
-    FAVORITES.includes(t.nick) ? '<span class="star">★</span>' : ""}${home ? " <small>home</small>" : ""}</div>`;
+    FAVORITES.includes(t.nick) ? '<span class="star">★</span>' : ""}${home ? " <small>home</small>" : ""}${scoreFor(t)}</div>`;
   $("games").innerHTML = list.length ? list.map((g) => `
     <div class="game ${watched.has(g.id) ? "watched" : ""} ${isFav(g) ? "fav" : ""}">
-      <div class="teams">${team(g.away, false)}${team(g.home, true)}</div>
+      <div class="teams">${team(g.away, false)}${team(g.home, true)}${resultLine(g)}</div>
       <div class="action">${status(g)}</div>
     </div>`).join("") : `<div class="empty">No games this day.</div>`;
   const on = document.querySelector("nav .on");
@@ -210,6 +257,7 @@ $("games").addEventListener("click", (e) => {
   const b = e.target.closest(".btn"); if (b) play(games.find((g) => g.id === b.dataset.id));
 });
 $("close").addEventListener("click", closePlayer);
+$("spoil").addEventListener("click", () => (scores ? hideScores() : showScores()));
 $("player").addEventListener("close", () => { destroyPlayer(); hideCover(); render(); });
 
 fetch("data.json?" + Date.now()).then((r) => r.json()).then((d) => {
