@@ -1,0 +1,24 @@
+name: Update highlights
+on:
+  schedule:
+    - cron: "*/30 0-9 * * *"   # every 30 min, 8pm–5am ET (game nights)
+    - cron: "0 10-23/2 * * *"  # every 2h the rest of the day
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python update.py
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
+      - run: |
+          git config user.name "highlights-bot"
+          git config user.email "highlights-bot@users.noreply.github.com"
+          git add docs/data.json state/videos.json
+          git diff --cached --quiet || git commit -m "Update highlights" && git push
