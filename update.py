@@ -158,12 +158,19 @@ def match(games, videos):
 
 # ---------- notify ----------
 
+FAVORITES = {"Warriors", "Timberwolves"}
+
+
 def notify(topic, game):
+    fav = bool({game["away"]["nick"], game["home"]["nick"]} & FAVORITES)
     msg = f"{game['away']['nick']} at {game['home']['nick']} highlights are up"
     req = urllib.request.Request(
         f"https://ntfy.sh/{topic}",
         data=msg.encode(),
-        headers={"Title": "NBA highlights", "Tags": "basketball", "Click": os.environ.get("DASHBOARD_URL", "")},
+        headers={"Title": "Your team's highlights" if fav else "NBA highlights",
+                 "Tags": "star,basketball" if fav else "basketball",
+                 "Priority": "high" if fav else "default",
+                 "Click": os.environ.get("DASHBOARD_URL", "")},
     )
     try:
         urllib.request.urlopen(req, timeout=10)
