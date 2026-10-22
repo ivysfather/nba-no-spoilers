@@ -68,7 +68,24 @@
   .score { margin-left: auto; padding-left: 10px; font-variant-numeric: tabular-nums; color: var(--muted); flex: none; }
   .score.win { color: var(--text); font-weight: 700; }
   .result { font-size: 13px; color: var(--muted); }
-  .result a { color: var(--live); text-decoration: none; margin-left: 6px; }
+  .result button { background: none; border: 0; padding: 0; font: inherit; color: var(--live); cursor: pointer; margin-left: 6px; }
+  #box { width: min(760px, 100vw); max-height: 92vh; background: var(--card); overflow: auto; }
+  .box-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px 6px; gap: 10px; }
+  .box-head h2 { font-size: 17px; margin: 0; }
+  .box-head button, .box-tabs button { background: none; border: 1px solid var(--line); color: var(--text); border-radius: 8px; padding: 6px 12px; font: inherit; cursor: pointer; }
+  .box-tabs { display: flex; gap: 8px; padding: 8px 16px; }
+  .box-tabs button.on { background: var(--accent); border-color: var(--accent); color: #111; font-weight: 600; }
+  .scroll { overflow-x: auto; padding: 0 0 8px; }
+  .bx { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; width: 100%; white-space: nowrap; }
+  .bx th, .bx td { padding: 7px 8px; text-align: right; border-bottom: 1px solid var(--line); }
+  .bx th { color: var(--muted); font-weight: 500; }
+  .bx th:first-child, .bx td:first-child { text-align: left; position: sticky; left: 0; background: var(--card); padding-left: 16px; }
+  .bx tr.sep td { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  .bx tr.total td { font-weight: 700; }
+  .bx .pos { color: var(--muted); font-size: 11px; margin-left: 4px; }
+  .bx .dnp { color: var(--muted); text-align: left; }
+  .box-foot { padding: 6px 16px 16px; font-size: 13px; }
+  .box-foot a { color: var(--live); text-decoration: none; }
   .star { color: var(--accent); margin-left: -4px; }
   nav button .dot { color: var(--accent); margin-left: 4px; }
   nav button.on .dot { color: #111; }
@@ -98,6 +115,11 @@
 <dialog id="player">
   <div class="frame"><div id="frame"></div><div class="cover" id="cover"></div></div>
   <div class="bar"><span id="nowPlaying"></span><button id="close">Close</button></div>
+</dialog>
+
+<dialog id="box">
+  <div class="box-head"><h2 id="boxTitle">Box score</h2><button id="boxClose">Close</button></div>
+  <div id="boxBody"><p class="empty">Loading…</p></div>
 </dialog>
 
 <script>
@@ -141,7 +163,7 @@ function scoreFor(t) {
 function resultLine(g) {
   const r = scores?.games[g.id];
   if (!r) return "";
-  return `<div class="result">${r.detail}<a href="https://www.espn.com/nba/boxscore/_/gameId/${g.id}" target="_blank" rel="noopener">Box score ↗</a></div>`;
+  return `<div class="result">${r.detail}<button data-box="${g.id}">Box score</button></div>`;
 }
 
 async function showScores() {
@@ -161,6 +183,64 @@ async function showScores() {
 }
 
 function hideScores() { scores = null; render(); }
+
+// ---------- box score (only reachable after Show scores) ----------
+let box = null, boxTeam = 0;
+const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+async function openBox(id) {
+  const g = games.find((x) => x.id === id);
+  $("boxTitle").textContent = `${g.away.nick} at ${g.home.nick}`;
+  $("boxBody").innerHTML = `<p class="empty">Loading…</p>`;
+  $("box").showModal();
+  try {
+    const d = await fetch(`https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event=${id}`).then((r) => r.json());
+    const comps = d.header.competitions[0].competitors;
+    const away = comps.find((c) => c.homeAway === "away"), home = comps.find((c) => c.homeAway === "home");
+    // ESPN lists teams in its own order; show away first, matching the cards
+    const teams = [...d.boxscore.players].sort((a, b) =>
+      (a.team.abbreviation === away.team.abbreviation ? -1 : 1) - (b.team.abbreviation === away.team.abbreviation ? -1 : 1));
+    box = { id, away, home, teams };
+    boxTeam = 0;
+    renderBox();
+  } catch {
+    $("boxBody").innerHTML = `<p class="empty">Couldn't load the box score.</p>`;
+  }
+}
+
+function lineScore() {
+  const { away, home } = box;
+  const n = Math.max(away.linescores?.length || 0, home.linescores?.length || 0);
+  const qh = Array.from({ length: n }, (_, i) => `<th>${i < 4 ? i + 1 : "OT" + (n > 5 ? i - 3 : "")}</th>`).join("");
+  const row = (c) => `<tr><td>${esc(c.team.abbreviation)}</td>${
+    (c.linescores || []).map((q) => `<td>${esc(q.displayValue)}</td>`).join("")}<td><b>${esc(c.score)}</b></td></tr>`;
+  return `<div class="scroll"><table class="bx"><tr><th></th>${qh}<th>T</th></tr>${row(away)}${row(home)}</table></div>`;
+}
+
+function renderBox() {
+  const t = box.teams[boxTeam], st = t.statistics[0];
+  const head = `<tr><th>Player</th>${st.labels.map((l) => `<th>${esc(l)}</th>`).join("")}</tr>`;
+  const line = (a) => a.didNotPlay || !a.stats?.length
+    ? `<tr><td>${esc(a.athlete.shortName)}</td><td class="dnp" colspan="${st.labels.length}">${esc(a.reason || "DNP")}</td></tr>`
+    : `<tr><td>${esc(a.athlete.shortName)}<span class="pos">${esc(a.athlete.position?.abbreviation)}</span></td>${
+        a.stats.map((v) => `<td>${esc(v)}</td>`).join("")}</tr>`;
+  const starters = st.athletes.filter((a) => a.starter), bench = st.athletes.filter((a) => !a.starter);
+  const sep = (label) => `<tr class="sep"><td colspan="${st.labels.length + 1}">${label}</td></tr>`;
+  const totals = st.totals?.length ? `<tr class="total"><td>Team</td>${st.totals.map((v) => `<td>${esc(v)}</td>`).join("")}</tr>` : "";
+  $("boxBody").innerHTML = `
+    ${lineScore()}
+    <div class="box-tabs">${box.teams.map((x, i) =>
+      `<button class="${i === boxTeam ? "on" : ""}" data-team="${i}">${esc(x.team.shortDisplayName)}</button>`).join("")}</div>
+    <div class="scroll"><table class="bx">${head}${sep("Starters")}${starters.map(line).join("")}${
+      sep("Bench")}${bench.map(line).join("")}${totals}</table></div>
+    <div class="box-foot"><a href="https://www.espn.com/nba/boxscore/_/gameId/${box.id}" target="_blank" rel="noopener">Full box score on ESPN ↗</a></div>`;
+}
+
+$("boxBody").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-team]");
+  if (b) { boxTeam = +b.dataset.team; renderBox(); }
+});
+$("boxClose").addEventListener("click", () => $("box").close());
 
 function render() {
   if (scores && scores.day !== selected) scores = null;
@@ -254,6 +334,7 @@ $("days").addEventListener("click", (e) => {
   render();
 });
 $("games").addEventListener("click", (e) => {
+  const bx = e.target.closest("[data-box]"); if (bx) return openBox(bx.dataset.box);
   const b = e.target.closest(".btn"); if (b) play(games.find((g) => g.id === b.dataset.id));
 });
 $("close").addEventListener("click", closePlayer);
