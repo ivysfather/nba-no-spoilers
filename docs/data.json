@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T19:49:02+00:00",
+ "updated": "2026-10-23T22:55:46+00:00",
  "games": [
   {
    "id": "401909088",
@@ -309,7 +309,7 @@
    "id": "401909848",
    "date": "2026-10-23",
    "tipoff": "2026-10-23T20:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Milwaukee Bucks",
     "nick": "Bucks",
