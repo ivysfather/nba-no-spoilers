@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T22:59:39+00:00",
+ "updated": "2026-10-23T02:14:18+00:00",
  "games": [
   {
    "id": "401909088",
@@ -271,7 +271,7 @@
    "id": "401909093",
    "date": "2026-10-22",
    "tipoff": "2026-10-22T23:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Philadelphia 76ers",
     "nick": "76ers",
@@ -284,13 +284,13 @@
     "abbr": "CLE",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png"
    },
-   "video": null
+   "video": "Q_7rLvEeRvo"
   },
   {
    "id": "401909094",
    "date": "2026-10-22",
    "tipoff": "2026-10-23T01:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Oklahoma City Thunder",
     "nick": "Thunder",
