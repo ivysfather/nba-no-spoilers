@@ -341,16 +341,46 @@ $("close").addEventListener("click", closePlayer);
 $("spoil").addEventListener("click", () => (scores ? hideScores() : showScores()));
 $("player").addEventListener("close", () => { destroyPlayer(); hideCover(); render(); });
 
-fetch("data.json?" + Date.now()).then((r) => r.json()).then((d) => {
-  games = d.games;
-  $("updated").textContent = "Updated " + new Date(d.updated).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" });
-  // Default to the latest day that has highlights you haven't watched, else the latest with any
-  const days = [...new Set(games.map((g) => g.date))].sort();
-  const withNew = days.filter((day) => games.some((g) => g.date === day && g.video && !watched.has(g.id)));
-  const withAny = days.filter((day) => games.some((g) => g.date === day && g.video));
-  selected = withNew.at(-1) || withAny.at(-1) || days[0];
-  render();
-}).catch(() => { $("updated").textContent = "Couldn't load games. Run update.py first."; });
+function ago(iso) {
+  const m = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (m < 1) return "just now";
+  if (m < 60) return `${m} min ago`;
+  const h = Math.round(m / 60);
+  return h < 24 ? `${h} hr ago` : new Date(iso).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" });
+}
+
+let updated = null, firstLoad = true;
+async function load() {
+  try {
+    const d = await fetch("data.json?" + Date.now(), { cache: "no-store" }).then((r) => r.json());
+    games = d.games; updated = d.updated;
+    $("updated").textContent = "Updated " + ago(updated);
+    const days = [...new Set(games.map((g) => g.date))].sort();
+    if (firstLoad || !days.includes(selected)) {
+      // Default to the latest day that has highlights you haven't watched, else the latest with any
+      const withNew = days.filter((day) => games.some((g) => g.date === day && g.video && !watched.has(g.id)));
+      const withAny = days.filter((day) => games.some((g) => g.date === day && g.video));
+      selected = withNew.at(-1) || withAny.at(-1) || days[0];
+      firstLoad = false;
+    }
+    if (!$("player").open && !$("box").open) render();
+  } catch {
+    $("updated").textContent = "Couldn't load games. Check your connection.";
+  }
+}
+
+// A home-screen app on iPhone resumes where you left it instead of reloading,
+// so refetch whenever the page comes back into view, and every 5 minutes while open.
+let hiddenAt = 0;
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) { hiddenAt = Date.now(); return; }
+  if (Date.now() - hiddenAt > 30 * 60000) firstLoad = true;  // away a while: jump to the newest day again
+  load();
+});
+window.addEventListener("pageshow", (e) => { if (e.persisted) load(); });
+setInterval(() => { if (!document.hidden) load(); }, 5 * 60000);
+setInterval(() => { if (updated) $("updated").textContent = "Updated " + ago(updated); }, 60000);
+load();
 </script>
 </body>
 </html>

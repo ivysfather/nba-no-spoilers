@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T20:20:48+00:00",
+ "updated": "2026-10-24T22:31:13+00:00",
  "games": [
   {
    "id": "401909834",
@@ -480,7 +480,7 @@
    "id": "401909853",
    "date": "2026-10-24",
    "tipoff": "2026-10-24T22:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Charlotte Hornets",
     "nick": "Hornets",

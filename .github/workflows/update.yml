@@ -1,9 +1,11 @@
 name: Update highlights
 on:
   schedule:
-    - cron: "*/30 0-9 * * *"   # every 30 min, 8pm–5am ET (game nights)
-    - cron: "0 10-23/2 * * *"  # every 2h the rest of the day
+    - cron: "15 */2 * * *"     # backfill every 2h; game nights are handled by watch.yml
   workflow_dispatch:
+concurrency:
+  group: data
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:

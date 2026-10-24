@@ -1,0 +1,30 @@
+name: Watch tonight's games
+on:
+  schedule:
+    # Several start times because GitHub often skips scheduled runs; extra ones exit fast.
+    - cron: "0 22 * * *"    # 6pm ET (EDT)
+    - cron: "30 23 * * *"
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+concurrency:
+  group: data
+  cancel-in-progress: false
+permissions:
+  contents: write
+  actions: write            # lets a long night hand off to a fresh job
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          git config user.name "highlights-bot"
+          git config user.email "highlights-bot@users.noreply.github.com"
+          python update.py --watch
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
+          GH_TOKEN: ${{ github.token }}
