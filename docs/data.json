@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T02:30:01+00:00",
+ "updated": "2026-10-25T03:10:15+00:00",
  "games": [
   {
    "id": "401909834",
@@ -537,7 +537,7 @@
    "id": "401909857",
    "date": "2026-10-24",
    "tipoff": "2026-10-25T00:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Chicago Bulls",
     "nick": "Bulls",
@@ -569,13 +569,13 @@
     "abbr": "SA",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png"
    },
-   "video": null
+   "video": "PstmDydijec"
   },
   {
    "id": "401909856",
    "date": "2026-10-24",
    "tipoff": "2026-10-25T00:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Atlanta Hawks",
     "nick": "Hawks",
