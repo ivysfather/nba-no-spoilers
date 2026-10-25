@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T18:59:22+00:00",
+ "updated": "2026-10-25T22:31:42+00:00",
  "games": [
   {
    "id": "401909093",
@@ -423,7 +423,7 @@
    "id": "401909861",
    "date": "2026-10-25",
    "tipoff": "2026-10-25T21:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Utah Jazz",
     "nick": "Jazz",
@@ -442,7 +442,7 @@
    "id": "401909862",
    "date": "2026-10-25",
    "tipoff": "2026-10-25T22:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Brooklyn Nets",
     "nick": "Nets",
