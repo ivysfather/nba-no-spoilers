@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T02:18:01+00:00",
+ "updated": "2026-10-27T02:38:07+00:00",
  "games": [
   {
    "id": "401909848",
@@ -550,7 +550,7 @@
     "abbr": "MIN",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png"
    },
-   "video": null
+   "video": "V3picYquSBQ"
   },
   {
    "id": "401909870",
@@ -594,7 +594,7 @@
    "id": "401909872",
    "date": "2026-10-26",
    "tipoff": "2026-10-27T00:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Milwaukee Bucks",
     "nick": "Bucks",
@@ -613,7 +613,7 @@
    "id": "401909873",
    "date": "2026-10-26",
    "tipoff": "2026-10-27T00:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Oklahoma City Thunder",
     "nick": "Thunder",
