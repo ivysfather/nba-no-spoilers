@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T17:57:08+00:00",
+ "updated": "2026-10-28T01:03:19+00:00",
  "games": [
   {
    "id": "401909853",
@@ -461,7 +461,7 @@
    "id": "401909877",
    "date": "2026-10-27",
    "tipoff": "2026-10-27T23:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Boston Celtics",
     "nick": "Celtics",
@@ -480,7 +480,7 @@
    "id": "401909878",
    "date": "2026-10-27",
    "tipoff": "2026-10-28T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New York Knicks",
     "nick": "Knicks",
@@ -499,7 +499,7 @@
    "id": "401909879",
    "date": "2026-10-27",
    "tipoff": "2026-10-28T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "San Antonio Spurs",
     "nick": "Spurs",
