@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T03:00:06+00:00",
+ "updated": "2026-10-28T03:20:11+00:00",
  "games": [
   {
    "id": "401909853",
@@ -474,7 +474,7 @@
     "abbr": "BKN",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bkn.png"
    },
-   "video": null
+   "video": "DS80FXjw2sI"
   },
   {
    "id": "401909878",
@@ -518,7 +518,7 @@
    "id": "401909880",
    "date": "2026-10-27",
    "tipoff": "2026-10-28T03:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Los Angeles Lakers",
     "nick": "Lakers",
