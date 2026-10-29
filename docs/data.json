@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T22:30:48+00:00",
+ "updated": "2026-10-29T02:38:59+00:00",
  "games": [
   {
    "id": "401909861",
@@ -385,7 +385,7 @@
    "id": "401909881",
    "date": "2026-10-28",
    "tipoff": "2026-10-28T23:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Atlanta Hawks",
     "nick": "Hawks",
@@ -398,13 +398,13 @@
     "abbr": "MIA",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png"
    },
-   "video": null
+   "video": "DebEBIty7yQ"
   },
   {
    "id": "401909882",
    "date": "2026-10-28",
    "tipoff": "2026-10-28T23:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Cleveland Cavaliers",
     "nick": "Cavaliers",
@@ -417,13 +417,13 @@
     "abbr": "WSH",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png"
    },
-   "video": null
+   "video": "Xxqp2tUc77Y"
   },
   {
    "id": "401909883",
    "date": "2026-10-28",
    "tipoff": "2026-10-28T23:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Detroit Pistons",
     "nick": "Pistons",
@@ -436,13 +436,13 @@
     "abbr": "CHA",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png"
    },
-   "video": null
+   "video": "LSKb0-Y_qMo"
   },
   {
    "id": "401909884",
    "date": "2026-10-28",
    "tipoff": "2026-10-28T23:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Indiana Pacers",
     "nick": "Pacers",
@@ -455,13 +455,13 @@
     "abbr": "PHI",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png"
    },
-   "video": null
+   "video": "1t8MA0nC_qg"
   },
   {
    "id": "401909885",
    "date": "2026-10-28",
    "tipoff": "2026-10-28T23:30Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Toronto Raptors",
     "nick": "Raptors",
@@ -474,13 +474,13 @@
     "abbr": "ORL",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png"
    },
-   "video": null
+   "video": "PFmDBjTMY0g"
   },
   {
    "id": "401909886",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T00:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Chicago Bulls",
     "nick": "Bulls",
@@ -499,7 +499,7 @@
    "id": "401909887",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T00:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Milwaukee Bucks",
     "nick": "Bucks",
@@ -518,7 +518,7 @@
    "id": "401909888",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -537,7 +537,7 @@
    "id": "401909889",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T00:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "New Orleans Pelicans",
     "nick": "Pelicans",
@@ -556,7 +556,7 @@
    "id": "401909890",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Utah Jazz",
     "nick": "Jazz",
@@ -575,7 +575,7 @@
    "id": "401909891",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T01:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Dallas Mavericks",
     "nick": "Mavericks",
