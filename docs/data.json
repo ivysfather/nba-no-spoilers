@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T02:38:59+00:00",
+ "updated": "2026-10-29T02:59:07+00:00",
  "games": [
   {
    "id": "401909861",
@@ -518,7 +518,7 @@
    "id": "401909888",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T00:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -531,7 +531,7 @@
     "abbr": "GS",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png"
    },
-   "video": null
+   "video": "HhTDSc5utco"
   },
   {
    "id": "401909889",
@@ -594,7 +594,7 @@
    "id": "401909892",
    "date": "2026-10-28",
    "tipoff": "2026-10-29T02:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "LA Clippers",
     "nick": "Clippers",
