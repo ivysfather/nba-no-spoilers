@@ -38,8 +38,23 @@ def get(url):
 # ---------- schedule ----------
 
 def fetch_games(day):
-    """Games for one ET date. Keeps only teams, tip-off and pre/in/post state."""
-    raw = json.loads(get(f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={day:%Y%m%d}"))
+    """Games for one ET date. Keeps only teams, tip-off and pre/in/post state.
+
+    ESPN sometimes answers with an empty body, so retry, then fall back to the
+    games we already have for that day rather than failing the whole run.
+    """
+    url = f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={day:%Y%m%d}"
+    for attempt in range(3):
+        try:
+            raw = json.loads(get(url))
+            break
+        except (ValueError, OSError) as e:
+            print(f"ESPN {day} attempt {attempt + 1} failed: {e}")
+            time.sleep(5 * (attempt + 1))
+    else:
+        cached = [g for g in json.loads(DATA.read_text())["games"] if g["date"] == day.isoformat()] if DATA.exists() else []
+        print(f"ESPN {day} unavailable; keeping {len(cached)} cached games")
+        return cached
     games = []
     for e in raw.get("events", []):
         comp = e["competitions"][0]
@@ -271,7 +286,11 @@ def watch(days):
 
         next_due = min(due(g) for g in pending)
         if now >= next_due:
-            games, new = run_once(days)
+            try:
+                games, new = run_once(days)
+            except Exception as e:  # one bad pass shouldn't end the night
+                print(f"Check failed, retrying next round: {e}")
+                new = []
             if new:
                 publish(f"Highlights: {len(new)} new")
             wait = CHECK_EVERY
