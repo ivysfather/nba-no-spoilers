@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T23:55:19+00:00",
+ "updated": "2026-10-30T01:45:09+00:00",
  "games": [
   {
    "id": "401909868",
@@ -480,7 +480,7 @@
    "id": "401909893",
    "date": "2026-10-29",
    "tipoff": "2026-10-30T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Atlanta Hawks",
     "nick": "Hawks",
@@ -499,7 +499,7 @@
    "id": "401909894",
    "date": "2026-10-29",
    "tipoff": "2026-10-30T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New Orleans Pelicans",
     "nick": "Pelicans",
