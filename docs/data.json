@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T19:18:48+00:00",
+ "updated": "2026-10-30T23:42:33+00:00",
  "games": [
   {
    "id": "401909877",
@@ -366,7 +366,7 @@
    "id": "401909277",
    "date": "2026-10-30",
    "tipoff": "2026-10-30T23:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Washington Wizards",
     "nick": "Wizards",
@@ -385,7 +385,7 @@
    "id": "401909278",
    "date": "2026-10-30",
    "tipoff": "2026-10-30T23:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Boston Celtics",
     "nick": "Celtics",
@@ -404,7 +404,7 @@
    "id": "401909279",
    "date": "2026-10-30",
    "tipoff": "2026-10-30T23:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Brooklyn Nets",
     "nick": "Nets",
