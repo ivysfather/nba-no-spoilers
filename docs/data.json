@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T23:42:33+00:00",
+ "updated": "2026-10-31T01:28:19+00:00",
  "games": [
   {
    "id": "401909877",
@@ -423,7 +423,7 @@
    "id": "401909280",
    "date": "2026-10-30",
    "tipoff": "2026-10-30T23:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Philadelphia 76ers",
     "nick": "76ers",
@@ -442,7 +442,7 @@
    "id": "401909281",
    "date": "2026-10-30",
    "tipoff": "2026-10-30T23:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Toronto Raptors",
     "nick": "Raptors",
@@ -461,7 +461,7 @@
    "id": "401909282",
    "date": "2026-10-30",
    "tipoff": "2026-10-31T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Miami Heat",
     "nick": "Heat",
@@ -480,7 +480,7 @@
    "id": "401909283",
    "date": "2026-10-30",
    "tipoff": "2026-10-31T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Dallas Mavericks",
     "nick": "Mavericks",
@@ -499,7 +499,7 @@
    "id": "401909284",
    "date": "2026-10-30",
    "tipoff": "2026-10-31T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
