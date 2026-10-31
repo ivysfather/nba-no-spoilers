@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T18:29:27+00:00",
+ "updated": "2026-10-31T23:20:31+00:00",
  "games": [
   {
    "id": "401909881",
@@ -480,7 +480,7 @@
    "id": "401909896",
    "date": "2026-10-31",
    "tipoff": "2026-10-31T19:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Utah Jazz",
     "nick": "Jazz",
@@ -499,7 +499,7 @@
    "id": "401909897",
    "date": "2026-10-31",
    "tipoff": "2026-10-31T22:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Charlotte Hornets",
     "nick": "Hornets",
@@ -518,7 +518,7 @@
    "id": "401909898",
    "date": "2026-10-31",
    "tipoff": "2026-10-31T23:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New Orleans Pelicans",
     "nick": "Pelicans",
