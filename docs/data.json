@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T02:11:33+00:00",
+ "updated": "2026-10-31T02:17:06+00:00",
  "games": [
   {
    "id": "401909877",
@@ -379,7 +379,7 @@
     "abbr": "CHA",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cha.png"
    },
-   "video": null
+   "video": "Htm7WtOjoMA"
   },
   {
    "id": "401909278",
@@ -518,7 +518,7 @@
    "id": "401909285",
    "date": "2026-10-30",
    "tipoff": "2026-10-31T02:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Golden State Warriors",
     "nick": "Warriors",
