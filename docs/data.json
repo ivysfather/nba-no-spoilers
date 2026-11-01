@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T18:53:32+00:00",
+ "updated": "2026-11-01T23:33:14+00:00",
  "games": [
   {
    "id": "401909893",
@@ -385,7 +385,7 @@
    "id": "401909903",
    "date": "2026-11-01",
    "tipoff": "2026-11-01T20:30Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Orlando Magic",
     "nick": "Magic",
@@ -404,7 +404,7 @@
    "id": "401909904",
    "date": "2026-11-01",
    "tipoff": "2026-11-01T22:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Indiana Pacers",
     "nick": "Pacers",
