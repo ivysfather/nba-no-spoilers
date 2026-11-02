@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T01:32:27+00:00",
+ "updated": "2026-11-02T04:20:09+00:00",
  "games": [
   {
    "id": "401909893",
@@ -423,7 +423,7 @@
    "id": "401909905",
    "date": "2026-11-01",
    "tipoff": "2026-11-02T01:30Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Golden State Warriors",
     "nick": "Warriors",
@@ -436,13 +436,13 @@
     "abbr": "LAC",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png"
    },
-   "video": null
+   "video": "XwGdluJ1wNY"
   },
   {
    "id": "401909906",
    "date": "2026-11-01",
    "tipoff": "2026-11-02T02:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Los Angeles Lakers",
     "nick": "Lakers",
