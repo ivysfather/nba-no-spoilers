@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T03:05:04+00:00",
+ "updated": "2026-11-05T03:40:03+00:00",
  "games": [
   {
    "id": "401909903",
@@ -423,7 +423,7 @@
    "id": "401909925",
    "date": "2026-11-04",
    "tipoff": "2026-11-05T00:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Brooklyn Nets",
     "nick": "Nets",
@@ -455,13 +455,13 @@
     "abbr": "CHI",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/chi.png"
    },
-   "video": null
+   "video": "uGdng5-pQ2o"
   },
   {
    "id": "401909927",
    "date": "2026-11-04",
    "tipoff": "2026-11-05T01:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Memphis Grizzlies",
     "nick": "Grizzlies",
@@ -499,7 +499,7 @@
    "id": "401909929",
    "date": "2026-11-04",
    "tipoff": "2026-11-05T01:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Oklahoma City Thunder",
     "nick": "Thunder",
@@ -594,7 +594,7 @@
    "id": "401909934",
    "date": "2026-11-04",
    "tipoff": "2026-11-05T03:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Sacramento Kings",
     "nick": "Kings",
