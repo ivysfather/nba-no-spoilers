@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T21:27:51+00:00",
+ "updated": "2026-11-07T01:43:26+00:00",
  "games": [
   {
    "id": "401909922",
@@ -309,7 +309,7 @@
    "id": "401909287",
    "date": "2026-11-06",
    "tipoff": "2026-11-07T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Atlanta Hawks",
     "nick": "Hawks",
@@ -328,7 +328,7 @@
    "id": "401909288",
    "date": "2026-11-06",
    "tipoff": "2026-11-07T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Charlotte Hornets",
     "nick": "Hornets",
@@ -347,7 +347,7 @@
    "id": "401909289",
    "date": "2026-11-06",
    "tipoff": "2026-11-07T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Cleveland Cavaliers",
     "nick": "Cavaliers",
@@ -366,7 +366,7 @@
    "id": "401909290",
    "date": "2026-11-06",
    "tipoff": "2026-11-07T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Dallas Mavericks",
     "nick": "Mavericks",
@@ -385,7 +385,7 @@
    "id": "401909291",
    "date": "2026-11-06",
    "tipoff": "2026-11-07T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Memphis Grizzlies",
     "nick": "Grizzlies",
@@ -404,7 +404,7 @@
    "id": "401909292",
    "date": "2026-11-06",
    "tipoff": "2026-11-07T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Milwaukee Bucks",
     "nick": "Bucks",
@@ -423,7 +423,7 @@
    "id": "401909293",
    "date": "2026-11-06",
    "tipoff": "2026-11-07T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New Orleans Pelicans",
     "nick": "Pelicans",
