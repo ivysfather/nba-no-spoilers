@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T04:20:23+00:00",
+ "updated": "2026-11-08T04:35:30+00:00",
  "games": [
   {
    "id": "401909922",
@@ -556,7 +556,7 @@
    "id": "401909942",
    "date": "2026-11-07",
    "tipoff": "2026-11-08T01:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Golden State Warriors",
     "nick": "Warriors",
@@ -569,13 +569,13 @@
     "abbr": "ORL",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png"
    },
-   "video": null
+   "video": "mS5L5RC8DrA"
   },
   {
    "id": "401909943",
    "date": "2026-11-07",
    "tipoff": "2026-11-08T02:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Phoenix Suns",
     "nick": "Suns",
