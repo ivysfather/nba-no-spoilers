@@ -27,6 +27,6 @@ The repo has to be public for free Pages. That's fine: the data has no scores an
 
 1. Install the **ntfy** app (iOS/Android) and subscribe to a hard-to-guess topic, e.g. `renzo-nba-7f3k2`.
 2. In the repo: Settings → Secrets → Actions → add `NTFY_TOPIC` with that topic. Optionally add a variable `DASHBOARD_URL` with your Pages URL so tapping the alert opens the dashboard.
-3. You get a push like "Warriors at Lakers highlights are up". No scores.
+3. You get a push only for Warriors games, like "Warriors at Lakers highlights are up". No scores. Change `NOTIFY_TEAMS` in `update.py` to add teams.
 
 Locally: `NTFY_TOPIC=renzo-nba-7f3k2 python3 update.py`.
