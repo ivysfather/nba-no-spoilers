@@ -321,7 +321,7 @@ async function openStandings() {
 
 function renderStandings() {
   const rows = standings[conf].map((t) => `
-    <tr class="${FAVORITES.includes(t.nick) ? "fav" : ""} ${t.seed === 6 ? "cut" : t.seed === 10 ? "cut2" : ""}">
+    <tr class="${t.nick === "Warriors" ? "fav" : ""} ${t.seed === 6 ? "cut" : t.seed === 10 ? "cut2" : ""}">
       <td class="seed">${t.seed}</td>
       <td class="tm"><img src="${esc(t.logo)}" alt="">${esc(t.nick)}</td>
       <td>${esc(t.w)}-${esc(t.l)}</td><td>${esc(t.pct)}</td><td>${esc(t.gb)}</td>
