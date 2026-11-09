@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T01:31:43+00:00",
+ "updated": "2026-11-09T02:00:02+00:00",
  "games": [
   {
    "id": "401909936",
@@ -366,7 +366,7 @@
    "id": "401909946",
    "date": "2026-11-08",
    "tipoff": "2026-11-08T23:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Detroit Pistons",
     "nick": "Pistons",
@@ -379,7 +379,7 @@
     "abbr": "LAL",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png"
    },
-   "video": null
+   "video": "nAB-mGboGeE"
   },
   {
    "id": "401909947",
