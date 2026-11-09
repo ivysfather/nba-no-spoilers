@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T02:00:02+00:00",
+ "updated": "2026-11-09T03:15:13+00:00",
  "games": [
   {
    "id": "401909936",
@@ -385,7 +385,7 @@
    "id": "401909947",
    "date": "2026-11-08",
    "tipoff": "2026-11-09T00:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -398,13 +398,13 @@
     "abbr": "UTAH",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png"
    },
-   "video": null
+   "video": "m5y27wC9kdI"
   },
   {
    "id": "401909948",
    "date": "2026-11-08",
    "tipoff": "2026-11-09T00:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Dallas Mavericks",
     "nick": "Mavericks",
@@ -442,7 +442,7 @@
    "id": "401909950",
    "date": "2026-11-08",
    "tipoff": "2026-11-09T02:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "LA Clippers",
     "nick": "Clippers",
@@ -461,7 +461,7 @@
    "id": "401909951",
    "date": "2026-11-08",
    "tipoff": "2026-11-09T02:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Sacramento Kings",
     "nick": "Kings",
