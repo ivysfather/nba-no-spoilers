@@ -8,7 +8,7 @@ status details (OT, etc.) and video titles never leave this script.
 Usage:
   python3 update.py              # last 3 days + today
   python3 update.py --days 7     # look back further
-Set NTFY_TOPIC to get a phone push when a new highlight is matched.
+Set NTFY_TOPIC to get a phone push when new Warriors highlights are matched.
 """
 import argparse
 import datetime as dt
@@ -175,18 +175,22 @@ def match(games, videos):
 
 # ---------- notify ----------
 
-FAVORITES = {"Warriors", "Timberwolves"}
+FAVORITES = {"Warriors", "Timberwolves"}  # watched sooner after tip-off
+NOTIFY_TEAMS = {"Warriors"}                # only these games trigger a phone push
+
+
+def wants_push(game):
+    return bool({game["away"]["nick"], game["home"]["nick"]} & NOTIFY_TEAMS)
 
 
 def notify(topic, game):
-    fav = bool({game["away"]["nick"], game["home"]["nick"]} & FAVORITES)
     msg = f"{game['away']['nick']} at {game['home']['nick']} highlights are up"
     req = urllib.request.Request(
         f"https://ntfy.sh/{topic}",
         data=msg.encode(),
-        headers={"Title": "Your team's highlights" if fav else "NBA highlights",
-                 "Tags": "star,basketball" if fav else "basketball",
-                 "Priority": "high" if fav else "default",
+        headers={"Title": "Warriors highlights",
+                 "Tags": "star,basketball",
+                 "Priority": "high",
                  "Click": os.environ.get("DASHBOARD_URL", "")},
     )
     try:
@@ -223,7 +227,7 @@ def run_once(days):
         g["video"] = matches.get(g["id"])
         if previous is not None and g["video"] and g["id"] not in previous:
             new.append(g["id"])
-            if topic:
+            if topic and wants_push(g):
                 notify(topic, g)
 
     DATA.parent.mkdir(exist_ok=True)
