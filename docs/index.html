@@ -99,6 +99,25 @@
   .cover button { border: 0; border-radius: 999px; padding: 14px 26px; font: inherit; font-weight: 600; background: var(--accent); color: #111; cursor: pointer; }
   .cover.done { inset: 0; }
   .cover p { margin: 0; color: var(--muted); }
+  .head-btns { display: flex; gap: 8px; flex: none; }
+  header { flex-wrap: wrap; }
+  h1 { white-space: nowrap; }
+  .stand-btn {
+    flex: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font: inherit; font-size: 14px;
+    font-weight: 600; background: var(--card); color: var(--text); cursor: pointer;
+  }
+  #standings { width: min(560px, 100vw); max-height: 92vh; background: var(--card); overflow: auto; }
+  .st td.tm { display: flex; align-items: center; gap: 8px; }
+  .st td.tm img { width: 22px; height: 22px; }
+  .st td.seed { color: var(--muted); width: 1%; padding-right: 0; }
+  .st th.seed, .st td.seed { text-align: left; position: static; padding-left: 16px; }
+  .st th:nth-child(2), .st td:nth-child(2) { text-align: left; position: sticky; left: 0; background: var(--card); padding-left: 8px; }
+  .st th:first-child, .st td:first-child { position: static; }
+  .st tr.fav td { color: var(--accent); font-weight: 700; }
+  .st tr.cut td { border-bottom: 2px solid var(--muted); }
+  .st tr.cut2 td { border-bottom: 1px dashed var(--muted); }
+  .st-note { padding: 8px 16px 16px; font-size: 12px; color: var(--muted); }
+  .st-note a { color: var(--muted); }
 </style>
 </head>
 <body>
@@ -107,7 +126,10 @@
     <h1>🏀 No Spoilers NBA</h1>
     <div class="sub" id="updated">Loading…</div>
   </div>
-  <button class="spoil" id="spoil">Show scores</button>
+  <div class="head-btns">
+    <button class="stand-btn" id="standBtn">Standings</button>
+    <button class="spoil" id="spoil">Show scores</button>
+  </div>
 </header>
 <nav id="days"></nav>
 <main id="games"></main>
@@ -120,6 +142,11 @@
 <dialog id="box">
   <div class="box-head"><h2 id="boxTitle">Box score</h2><button id="boxClose">Close</button></div>
   <div id="boxBody"><p class="empty">Loading…</p></div>
+</dialog>
+
+<dialog id="standings">
+  <div class="box-head"><h2>Standings</h2><button id="standClose">Close</button></div>
+  <div id="standBody"><p class="empty">Loading…</p></div>
 </dialog>
 
 <script>
@@ -264,6 +291,58 @@ function render() {
   if (on) $("days").scrollLeft = on.offsetLeft - $("days").clientWidth / 2 + on.clientWidth / 2;
 }
 
+// ---------- standings (fetched from ESPN only when you ask; reveals results) ----------
+let standings = null, conf = "West";
+
+async function openStandings() {
+  if (!confirm("Show conference standings? Win-loss records reveal results.")) return;
+  $("standBody").innerHTML = `<p class="empty">Loading…</p>`;
+  $("standings").showModal();
+  try {
+    const d = await fetch("https://site.api.espn.com/apis/v2/sports/basketball/nba/standings").then((r) => r.json());
+    standings = {};
+    for (const c of d.children) {
+      const key = c.name.startsWith("West") ? "West" : "East";
+      standings[key] = c.standings.entries.map((e) => {
+        const st = Object.fromEntries(e.stats.map((x) => [x.name, x]));
+        return {
+          seed: +st.playoffSeed.value, nick: e.team.shortDisplayName, name: e.team.displayName,
+          logo: e.team.logos?.[0]?.href || "",
+          w: st.wins.displayValue, l: st.losses.displayValue,
+          pct: st.winPercent.displayValue, gb: st.gamesBehind.displayValue,
+        };
+      }).sort((a, b) => a.seed - b.seed);
+    }
+    renderStandings();
+  } catch {
+    $("standBody").innerHTML = `<p class="empty">Couldn't load standings.</p>`;
+  }
+}
+
+function renderStandings() {
+  const rows = standings[conf].map((t) => `
+    <tr class="${FAVORITES.includes(t.nick) ? "fav" : ""} ${t.seed === 6 ? "cut" : t.seed === 10 ? "cut2" : ""}">
+      <td class="seed">${t.seed}</td>
+      <td class="tm"><img src="${esc(t.logo)}" alt="">${esc(t.nick)}</td>
+      <td>${esc(t.w)}-${esc(t.l)}</td><td>${esc(t.pct)}</td><td>${esc(t.gb)}</td>
+    </tr>`).join("");
+  $("standBody").innerHTML = `
+    <div class="box-tabs">${["West", "East"].map((c) =>
+      `<button class="${c === conf ? "on" : ""}" data-conf="${c}">${c}</button>`).join("")}</div>
+    <div class="scroll"><table class="bx st">
+      <tr><th class="seed">#</th><th>Team</th><th>W-L</th><th>PCT</th><th>GB</th></tr>${rows}
+    </table></div>
+    <div class="st-note">Solid line: top 6 make the playoffs. Dashed line: 7–10 play-in.
+      Source: <a href="https://www.espn.com/nba/standings" target="_blank" rel="noopener">ESPN ↗</a></div>`;
+}
+
+$("standBody").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-conf]");
+  if (b) { conf = b.dataset.conf; renderStandings(); }
+});
+$("standBtn").addEventListener("click", openStandings);
+$("standClose").addEventListener("click", () => $("standings").close());
+
 // YouTube's player API lets us cover its suggested videos (pause panel, end screen).
 let player = null, current = null, apiReady = null;
 function loadApi() {
@@ -363,7 +442,7 @@ async function load() {
       selected = withNew.at(-1) || withAny.at(-1) || days[0];
       firstLoad = false;
     }
-    if (!$("player").open && !$("box").open) render();
+    if (!$("player").open && !$("box").open && !$("standings").open) render();
   } catch {
     $("updated").textContent = "Couldn't load games. Check your connection.";
   }
