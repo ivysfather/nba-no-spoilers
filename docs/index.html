@@ -156,7 +156,7 @@ let watched = new Set();
 try { watched = new Set(JSON.parse(localStorage.getItem(WATCHED_KEY) || "[]")); } catch {}
 const saveWatched = () => { try { localStorage.setItem(WATCHED_KEY, JSON.stringify([...watched])); } catch {} };
 
-const FAVORITES = ["Warriors", "Timberwolves"];
+const FAVORITES = ["Warriors"];
 const isFav = (g) => FAVORITES.includes(g.home.nick) || FAVORITES.includes(g.away.nick);
 
 const $ = (id) => document.getElementById(id);
@@ -321,7 +321,7 @@ async function openStandings() {
 
 function renderStandings() {
   const rows = standings[conf].map((t) => `
-    <tr class="${t.nick === "Warriors" ? "fav" : ""} ${t.seed === 6 ? "cut" : t.seed === 10 ? "cut2" : ""}">
+    <tr class="${FAVORITES.includes(t.nick) ? "fav" : ""} ${t.seed === 6 ? "cut" : t.seed === 10 ? "cut2" : ""}">
       <td class="seed">${t.seed}</td>
       <td class="tm"><img src="${esc(t.logo)}" alt="">${esc(t.nick)}</td>
       <td>${esc(t.w)}-${esc(t.l)}</td><td>${esc(t.pct)}</td><td>${esc(t.gb)}</td>
