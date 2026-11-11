@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T20:47:44+00:00",
+ "updated": "2026-11-11T01:46:36+00:00",
  "games": [
   {
    "id": "401909938",
@@ -423,7 +423,7 @@
    "id": "401909960",
    "date": "2026-11-10",
    "tipoff": "2026-11-11T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New York Knicks",
     "nick": "Knicks",
@@ -442,7 +442,7 @@
    "id": "401909961",
    "date": "2026-11-10",
    "tipoff": "2026-11-11T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Philadelphia 76ers",
     "nick": "76ers",
