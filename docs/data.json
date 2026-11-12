@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T17:51:37+00:00",
+ "updated": "2026-11-12T00:35:46+00:00",
  "games": [
   {
    "id": "401909945",
@@ -404,7 +404,7 @@
    "id": "401909966",
    "date": "2026-11-11",
    "tipoff": "2026-11-12T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Indiana Pacers",
     "nick": "Pacers",
@@ -423,7 +423,7 @@
    "id": "401909967",
    "date": "2026-11-11",
    "tipoff": "2026-11-12T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New York Knicks",
     "nick": "Knicks",
@@ -442,7 +442,7 @@
    "id": "401909968",
    "date": "2026-11-11",
    "tipoff": "2026-11-12T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Toronto Raptors",
     "nick": "Raptors",
