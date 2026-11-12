@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T02:45:41+00:00",
+ "updated": "2026-11-12T03:25:08+00:00",
  "games": [
   {
    "id": "401909945",
@@ -436,7 +436,7 @@
     "abbr": "CLE",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png"
    },
-   "video": null
+   "video": "51KEL8sxRdo"
   },
   {
    "id": "401909968",
@@ -461,7 +461,7 @@
    "id": "401909969",
    "date": "2026-11-11",
    "tipoff": "2026-11-12T01:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Chicago Bulls",
     "nick": "Bulls",
@@ -575,7 +575,7 @@
    "id": "401909975",
    "date": "2026-11-11",
    "tipoff": "2026-11-12T03:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Portland Trail Blazers",
     "nick": "Trail Blazers",
