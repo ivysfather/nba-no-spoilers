@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T23:39:09+00:00",
+ "updated": "2026-11-13T02:28:50+00:00",
  "games": [
   {
    "id": "401909952",
@@ -461,7 +461,7 @@
    "id": "401909976",
    "date": "2026-11-12",
    "tipoff": "2026-11-13T00:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Philadelphia 76ers",
     "nick": "76ers",
@@ -480,7 +480,7 @@
    "id": "401909977",
    "date": "2026-11-12",
    "tipoff": "2026-11-13T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Washington Wizards",
     "nick": "Wizards",
@@ -499,7 +499,7 @@
    "id": "401909978",
    "date": "2026-11-12",
    "tipoff": "2026-11-13T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -518,7 +518,7 @@
    "id": "401909979",
    "date": "2026-11-12",
    "tipoff": "2026-11-13T02:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Phoenix Suns",
     "nick": "Suns",
