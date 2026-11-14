@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T23:29:24+00:00",
+ "updated": "2026-11-14T02:05:20+00:00",
  "games": [
   {
    "id": "401909960",
@@ -385,7 +385,7 @@
    "id": "401909296",
    "date": "2026-11-13",
    "tipoff": "2026-11-14T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Indiana Pacers",
     "nick": "Pacers",
@@ -404,7 +404,7 @@
    "id": "401909297",
    "date": "2026-11-13",
    "tipoff": "2026-11-14T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Orlando Magic",
     "nick": "Magic",
@@ -423,7 +423,7 @@
    "id": "401909298",
    "date": "2026-11-13",
    "tipoff": "2026-11-14T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Miami Heat",
     "nick": "Heat",
@@ -442,7 +442,7 @@
    "id": "401909299",
    "date": "2026-11-13",
    "tipoff": "2026-11-14T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Chicago Bulls",
     "nick": "Bulls",
@@ -461,7 +461,7 @@
    "id": "401909300",
    "date": "2026-11-13",
    "tipoff": "2026-11-14T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New Orleans Pelicans",
     "nick": "Pelicans",
@@ -480,7 +480,7 @@
    "id": "401909301",
    "date": "2026-11-13",
    "tipoff": "2026-11-14T01:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Houston Rockets",
     "nick": "Rockets",
