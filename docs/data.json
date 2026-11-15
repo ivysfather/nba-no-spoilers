@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T23:52:17+00:00",
+ "updated": "2026-11-15T01:37:02+00:00",
  "games": [
   {
    "id": "401909966",
@@ -442,7 +442,7 @@
    "id": "401909980",
    "date": "2026-11-14",
    "tipoff": "2026-11-15T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New Orleans Pelicans",
     "nick": "Pelicans",
@@ -461,7 +461,7 @@
    "id": "401909981",
    "date": "2026-11-14",
    "tipoff": "2026-11-15T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Cleveland Cavaliers",
     "nick": "Cavaliers",
@@ -480,7 +480,7 @@
    "id": "401909982",
    "date": "2026-11-14",
    "tipoff": "2026-11-15T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Miami Heat",
     "nick": "Heat",
@@ -499,7 +499,7 @@
    "id": "401909983",
    "date": "2026-11-14",
    "tipoff": "2026-11-15T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Memphis Grizzlies",
     "nick": "Grizzlies",
@@ -518,7 +518,7 @@
    "id": "401909984",
    "date": "2026-11-14",
    "tipoff": "2026-11-15T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
