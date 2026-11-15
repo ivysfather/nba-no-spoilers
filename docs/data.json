@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T15:37:32+00:00",
+ "updated": "2026-11-15T21:00:08+00:00",
  "games": [
   {
    "id": "401909976",
@@ -347,7 +347,7 @@
    "id": "401909985",
    "date": "2026-11-15",
    "tipoff": "2026-11-15T18:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Philadelphia 76ers",
     "nick": "76ers",
@@ -360,7 +360,7 @@
     "abbr": "IND",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png"
    },
-   "video": null
+   "video": "RiHgRaPWLSA"
   },
   {
    "id": "401909986",
