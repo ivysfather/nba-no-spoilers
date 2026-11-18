@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T03:35:11+00:00",
+ "updated": "2026-11-18T04:20:37+00:00",
  "games": [
   {
    "id": "401909980",
@@ -442,7 +442,7 @@
    "id": "401910003",
    "date": "2026-11-17",
    "tipoff": "2026-11-18T01:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -474,13 +474,13 @@
     "abbr": "DET",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png"
    },
-   "video": null
+   "video": "USVBwxlGaHY"
   },
   {
    "id": "401910006",
    "date": "2026-11-17",
    "tipoff": "2026-11-18T03:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "LA Clippers",
     "nick": "Clippers",
@@ -499,7 +499,7 @@
    "id": "401910005",
    "date": "2026-11-17",
    "tipoff": "2026-11-18T04:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Los Angeles Lakers",
     "nick": "Lakers",
