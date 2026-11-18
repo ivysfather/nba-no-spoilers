@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T23:28:45+00:00",
+ "updated": "2026-11-18T03:27:52+00:00",
  "games": [
   {
    "id": "401909980",
@@ -423,7 +423,7 @@
    "id": "401910002",
    "date": "2026-11-17",
    "tipoff": "2026-11-18T00:30Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Toronto Raptors",
     "nick": "Raptors",
@@ -442,7 +442,7 @@
    "id": "401910003",
    "date": "2026-11-17",
    "tipoff": "2026-11-18T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -461,7 +461,7 @@
    "id": "401910004",
    "date": "2026-11-17",
    "tipoff": "2026-11-18T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "San Antonio Spurs",
     "nick": "Spurs",
