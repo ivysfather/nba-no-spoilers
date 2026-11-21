@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T01:27:03+00:00",
+ "updated": "2026-11-21T03:01:58+00:00",
  "games": [
   {
    "id": "401910002",
@@ -404,7 +404,7 @@
    "id": "401909305",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T00:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Atlanta Hawks",
     "nick": "Hawks",
@@ -442,7 +442,7 @@
    "id": "401909307",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T00:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Cleveland Cavaliers",
     "nick": "Cavaliers",
@@ -518,7 +518,7 @@
    "id": "401909311",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T02:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Utah Jazz",
     "nick": "Jazz",
