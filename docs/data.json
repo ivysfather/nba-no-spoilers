@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T05:30:01+00:00",
+ "updated": "2026-11-21T05:50:05+00:00",
  "games": [
   {
    "id": "401910007",
@@ -436,13 +436,13 @@
     "abbr": "PHX",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png"
    },
-   "video": null
+   "video": "YrMGKLJts8c"
   },
   {
    "id": "401909312",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T03:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Denver Nuggets",
     "nick": "Nuggets",
