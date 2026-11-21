@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T18:34:41+00:00",
+ "updated": "2026-11-21T01:27:03+00:00",
  "games": [
   {
    "id": "401910002",
@@ -404,7 +404,7 @@
    "id": "401909305",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Atlanta Hawks",
     "nick": "Hawks",
@@ -423,7 +423,7 @@
    "id": "401909306",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Brooklyn Nets",
     "nick": "Nets",
@@ -442,7 +442,7 @@
    "id": "401909307",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Cleveland Cavaliers",
     "nick": "Cavaliers",
@@ -461,7 +461,7 @@
    "id": "401909308",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Detroit Pistons",
     "nick": "Pistons",
@@ -480,7 +480,7 @@
    "id": "401909309",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Chicago Bulls",
     "nick": "Bulls",
@@ -499,7 +499,7 @@
    "id": "401909310",
    "date": "2026-11-20",
    "tipoff": "2026-11-21T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Oklahoma City Thunder",
     "nick": "Thunder",
