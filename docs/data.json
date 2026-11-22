@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T01:58:20+00:00",
+ "updated": "2026-11-22T03:30:00+00:00",
  "games": [
   {
    "id": "401910007",
@@ -499,7 +499,7 @@
    "id": "401910024",
    "date": "2026-11-21",
    "tipoff": "2026-11-22T00:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "New York Knicks",
     "nick": "Knicks",
@@ -512,13 +512,13 @@
     "abbr": "POR",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png"
    },
-   "video": null
+   "video": "ArkOTszDX4A"
   },
   {
    "id": "401910025",
    "date": "2026-11-21",
    "tipoff": "2026-11-22T01:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Dallas Mavericks",
     "nick": "Mavericks",
@@ -537,7 +537,7 @@
    "id": "401910026",
    "date": "2026-11-21",
    "tipoff": "2026-11-22T01:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -556,7 +556,7 @@
    "id": "401910027",
    "date": "2026-11-21",
    "tipoff": "2026-11-22T01:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "San Antonio Spurs",
     "nick": "Spurs",
@@ -575,7 +575,7 @@
    "id": "401910028",
    "date": "2026-11-21",
    "tipoff": "2026-11-22T03:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Sacramento Kings",
     "nick": "Kings",
