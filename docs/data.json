@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T00:37:30+00:00",
+ "updated": "2026-11-25T04:49:32+00:00",
  "games": [
   {
    "id": "401910023",
@@ -442,7 +442,7 @@
    "id": "401909314",
    "date": "2026-11-24",
    "tipoff": "2026-11-25T00:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Orlando Magic",
     "nick": "Magic",
@@ -455,13 +455,13 @@
     "abbr": "DET",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png"
    },
-   "video": null
+   "video": "2bKXngn2SdM"
   },
   {
    "id": "401909315",
    "date": "2026-11-24",
    "tipoff": "2026-11-25T01:00Z",
-   "state": "pre",
+   "state": "post",
    "home": {
     "name": "Washington Wizards",
     "nick": "Wizards",
@@ -474,13 +474,13 @@
     "abbr": "BOS",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png"
    },
-   "video": null
+   "video": "jPqhWPPBhAg"
   },
   {
    "id": "401909316",
    "date": "2026-11-24",
    "tipoff": "2026-11-25T03:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Denver Nuggets",
     "nick": "Nuggets",
