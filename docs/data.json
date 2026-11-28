@@ -1,63 +1,6 @@
 {
- "updated": "2026-11-28T04:30:06+00:00",
+ "updated": "2026-11-28T05:10:02+00:00",
  "games": [
-  {
-   "id": "401909314",
-   "date": "2026-11-24",
-   "tipoff": "2026-11-25T00:00Z",
-   "state": "post",
-   "home": {
-    "name": "Orlando Magic",
-    "nick": "Magic",
-    "abbr": "ORL",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png"
-   },
-   "away": {
-    "name": "Detroit Pistons",
-    "nick": "Pistons",
-    "abbr": "DET",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png"
-   },
-   "video": "2bKXngn2SdM"
-  },
-  {
-   "id": "401909315",
-   "date": "2026-11-24",
-   "tipoff": "2026-11-25T01:00Z",
-   "state": "post",
-   "home": {
-    "name": "Washington Wizards",
-    "nick": "Wizards",
-    "abbr": "WSH",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/wsh.png"
-   },
-   "away": {
-    "name": "Boston Celtics",
-    "nick": "Celtics",
-    "abbr": "BOS",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png"
-   },
-   "video": "jPqhWPPBhAg"
-  },
-  {
-   "id": "401909316",
-   "date": "2026-11-24",
-   "tipoff": "2026-11-25T03:00Z",
-   "state": "post",
-   "home": {
-    "name": "Denver Nuggets",
-    "nick": "Nuggets",
-    "abbr": "DEN",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png"
-   },
-   "away": {
-    "name": "Dallas Mavericks",
-    "nick": "Mavericks",
-    "abbr": "DAL",
-    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/dal.png"
-   },
-   "video": "QjD0SzfHZhQ"
-  },
   {
    "id": "401909317",
    "date": "2026-11-25",
@@ -347,7 +290,7 @@
    "id": "401909332",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T02:00Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Phoenix Suns",
     "nick": "Suns",
@@ -385,7 +328,7 @@
    "id": "401909334",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T02:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Utah Jazz",
     "nick": "Jazz",
@@ -404,7 +347,7 @@
    "id": "401909335",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T02:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "LA Clippers",
     "nick": "Clippers",
@@ -423,7 +366,7 @@
    "id": "401909336",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T02:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Portland Trail Blazers",
     "nick": "Trail Blazers",
@@ -436,7 +379,7 @@
     "abbr": "GS",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png"
    },
-   "video": null
+   "video": "cF-94H3H_Fw"
   },
   {
    "id": "401910046",
@@ -530,6 +473,196 @@
     "nick": "76ers",
     "abbr": "PHI",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910054",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T20:30Z",
+   "state": "pre",
+   "home": {
+    "name": "Cleveland Cavaliers",
+    "nick": "Cavaliers",
+    "abbr": "CLE",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png"
+   },
+   "away": {
+    "name": "Miami Heat",
+    "nick": "Heat",
+    "abbr": "MIA",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mia.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910051",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T21:00Z",
+   "state": "pre",
+   "home": {
+    "name": "Memphis Grizzlies",
+    "nick": "Grizzlies",
+    "abbr": "MEM",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png"
+   },
+   "away": {
+    "name": "Los Angeles Lakers",
+    "nick": "Lakers",
+    "abbr": "LAL",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lal.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910052",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T21:00Z",
+   "state": "pre",
+   "home": {
+    "name": "San Antonio Spurs",
+    "nick": "Spurs",
+    "abbr": "SA",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sa.png"
+   },
+   "away": {
+    "name": "Boston Celtics",
+    "nick": "Celtics",
+    "abbr": "BOS",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/bos.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910053",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T22:00Z",
+   "state": "pre",
+   "home": {
+    "name": "Utah Jazz",
+    "nick": "Jazz",
+    "abbr": "UTAH",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png"
+   },
+   "away": {
+    "name": "Phoenix Suns",
+    "nick": "Suns",
+    "abbr": "PHX",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phx.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910055",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T23:00Z",
+   "state": "pre",
+   "home": {
+    "name": "Detroit Pistons",
+    "nick": "Pistons",
+    "abbr": "DET",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/det.png"
+   },
+   "away": {
+    "name": "Orlando Magic",
+    "nick": "Magic",
+    "abbr": "ORL",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/orl.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910056",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T23:00Z",
+   "state": "pre",
+   "home": {
+    "name": "New York Knicks",
+    "nick": "Knicks",
+    "abbr": "NY",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ny.png"
+   },
+   "away": {
+    "name": "Atlanta Hawks",
+    "nick": "Hawks",
+    "abbr": "ATL",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910057",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T23:00Z",
+   "state": "pre",
+   "home": {
+    "name": "Toronto Raptors",
+    "nick": "Raptors",
+    "abbr": "TOR",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/tor.png"
+   },
+   "away": {
+    "name": "Denver Nuggets",
+    "nick": "Nuggets",
+    "abbr": "DEN",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/den.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910058",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-29T23:00Z",
+   "state": "pre",
+   "home": {
+    "name": "Portland Trail Blazers",
+    "nick": "Trail Blazers",
+    "abbr": "POR",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/por.png"
+   },
+   "away": {
+    "name": "New Orleans Pelicans",
+    "nick": "Pelicans",
+    "abbr": "NO",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910059",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-30T01:30Z",
+   "state": "pre",
+   "home": {
+    "name": "Golden State Warriors",
+    "nick": "Warriors",
+    "abbr": "GS",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/gs.png"
+   },
+   "away": {
+    "name": "LA Clippers",
+    "nick": "Clippers",
+    "abbr": "LAC",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/lac.png"
+   },
+   "video": null
+  },
+  {
+   "id": "401910060",
+   "date": "2026-11-29",
+   "tipoff": "2026-11-30T02:00Z",
+   "state": "pre",
+   "home": {
+    "name": "Sacramento Kings",
+    "nick": "Kings",
+    "abbr": "SAC",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/sac.png"
+   },
+   "away": {
+    "name": "Minnesota Timberwolves",
+    "nick": "Timberwolves",
+    "abbr": "MIN",
+    "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/min.png"
    },
    "video": null
   }
