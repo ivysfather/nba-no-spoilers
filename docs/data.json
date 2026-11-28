@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T03:47:09+00:00",
+ "updated": "2026-11-28T04:00:00+00:00",
  "games": [
   {
    "id": "401909314",
@@ -322,13 +322,13 @@
     "abbr": "ATL",
     "logo": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png"
    },
-   "video": null
+   "video": "cS7RrtbKMJQ"
   },
   {
    "id": "401909331",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T01:30Z",
-   "state": "in",
+   "state": "post",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
