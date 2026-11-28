@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T19:27:03+00:00",
+ "updated": "2026-11-28T02:39:20+00:00",
  "games": [
   {
    "id": "401909314",
@@ -233,7 +233,7 @@
    "id": "401909326",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T00:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "New York Knicks",
     "nick": "Knicks",
@@ -252,7 +252,7 @@
    "id": "401909327",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Detroit Pistons",
     "nick": "Pistons",
@@ -271,7 +271,7 @@
    "id": "401909328",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Indiana Pacers",
     "nick": "Pacers",
@@ -290,7 +290,7 @@
    "id": "401909329",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T00:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Toronto Raptors",
     "nick": "Raptors",
@@ -309,7 +309,7 @@
    "id": "401909330",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T01:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Boston Celtics",
     "nick": "Celtics",
@@ -328,7 +328,7 @@
    "id": "401909331",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T01:30Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Minnesota Timberwolves",
     "nick": "Timberwolves",
@@ -347,7 +347,7 @@
    "id": "401909332",
    "date": "2026-11-27",
    "tipoff": "2026-11-28T02:00Z",
-   "state": "pre",
+   "state": "in",
    "home": {
     "name": "Phoenix Suns",
     "nick": "Suns",
